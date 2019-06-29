@@ -1,4 +1,4 @@
 gamesite
 ========
 
-A site for games I've made.
+A site for displaying my map
