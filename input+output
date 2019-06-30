@@ -2,26 +2,27 @@
 <html>
  <head>
   <meta charset="utf-8" />
-  <title>Challenge: Mad Libs</title>
+  <title>input output/title>
  </head>
  <body>
  
-    <h1>Mad Libs</h1>
+    <h1>input output</h1>
      
     <ul>
-      <li>Noun: <input type="text" id="noun"></li>
-      <li>Adjective: <input type="text" id="adjective"></li>
-      <li>Someone's Name: <input type="text" id="person"></li>
+      <li>x: <input type="text" id="x"></li>
+      <li>y: <input type="text" id="y"></li>
+      <li>size: <input type="text" id="size"></li>
+      <li>keyword: <input type="text" id="keyword"></li>
     </ul>
      
-    <button id="lib-button">Lib it!</button>
+    <button id="searchButton">Search database</button>
       
-    <p>Generated story: 
-    <span id="story"></span>
+    <p>Found objects: 
+    <span id="objects"></span>
     </p>
  
     <script>
-        var libButton = document.getElementById('lib-button');
+        var searchButton = document.getElementById('searchButton');
         var libIt = function() {
             var storyDiv = document.getElementById("story");
             var noun = document.getElementById('person').value
