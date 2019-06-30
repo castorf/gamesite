@@ -1,11 +1,3 @@
-//Load the library for file i/o in Node JS
-const fs = require('fs');
-var fname = 'map_locations.js'
-// Read the file into a Buffer 'data'
-data = fs.readFileSync(fname)
-// process the buffer as javascript to execute.
-eval(data.toString('ascii'))
- // Now we have locations!
  console.log(Object.keys(locations).length)
 // console.log(data.toString('utf8'))
 var collected = Object.entries(locations)
