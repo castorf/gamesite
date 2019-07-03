@@ -9,6 +9,10 @@ var find = function() {
   var searchX = document.getElementById('x').value
   var searchY = document.getElementById('y').value
   var size = document.getElementById('size').value
+  console.log('x: '+searchX)
+  console.log('y: '+searchY)
+  console.log('size: '+size)
+  console.log('keyword: '+keyword)
   for (var y = 0; y < collected.length; y++) {
     var objecter= collected[y][1]
     if (objecter.display_name.search(keyword) > -1) {
