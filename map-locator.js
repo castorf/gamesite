@@ -14,7 +14,7 @@ var find = function() {
       var yabloc = objecter.locations
       var counteer = false
       for (var x = 0; x < yabloc.length; x++) {
-        if (searchX < yabloc[x][0] && (searchX + size) > yabloc[x][0] && searchY < yabloc[x][1] && (searchY + size) > yabloc[x][1]) {
+        if (searchX < yabloc[x][0] && searchX + size > yabloc[x][0] && searchY < yabloc[x][1] && searchY + size > yabloc[x][1]) {
           if (counteer == false) {
             console.log(objecter.display_name)
             results.innerHTML += objecter.display_name
