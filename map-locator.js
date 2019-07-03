@@ -1,7 +1,7 @@
  console.log(Object.keys(locations).length)
 // console.log(data.toString('utf8'))
 var searchButton = document.getElementById('searchButton');
-var find = function() {
+var onclick = function() {
   console.log('starting...')
   var results = document.getElementById('objects')
   var collected = Object.entries(locations)
@@ -9,6 +9,9 @@ var find = function() {
   var searchX = document.getElementById('x').value
   var searchY = document.getElementById('y').value
   var size = document.getElementById('size').value
+  find(searchX, searchY, size, keyword);
+}
+find = function(searchX, searchY, size, keyword) {
   console.log('x: '+searchX)
   console.log('y: '+searchY)
   console.log('size: '+size)
@@ -37,4 +40,4 @@ var find = function() {
     }
   }
 };
-searchButton.addEventListener('click', find);
+searchButton.addEventListener('click', onclick);
