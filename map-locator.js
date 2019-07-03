@@ -1,17 +1,19 @@
- console.log(Object.keys(locations).length)
+
+console.log(Object.keys(locations).length)
 // console.log(data.toString('utf8'))
 var searchButton = document.getElementById('searchButton');
-var onclick = function() {
+var pushed = function() {
   console.log('starting...')
   var results = document.getElementById('objects')
-  var collected = Object.entries(locations)
   var keyword = document.getElementById('keyword').value
   var searchX = document.getElementById('x').value
   var searchY = document.getElementById('y').value
   var size = document.getElementById('size').value
   find(searchX, searchY, size, keyword);
 }
+//	console.log('x: ' + item[0] + ' y: ' + item[1]); // 2510 1527 100 Travelers
 find = function(searchX, searchY, size, keyword) {
+  var collected = Object.entries(locations)
   console.log('x: '+searchX)
   console.log('y: '+searchY)
   console.log('size: '+size)
@@ -27,10 +29,8 @@ find = function(searchX, searchY, size, keyword) {
             && searchY < yabloc[x][1] && searchY + size > yabloc[x][1]) {
           if (counteer == false) {
             console.log(objecter.display_name)
-            results.innerHTML += objecter.display_name
+            results.innerHTML += ' ' + objecter.display_name + ' '
           }
-          console.log('object found')
-          console.log(yabloc[x]);
           results.innerHTML += yabloc[x]
           counteer = true
         } else {
@@ -40,4 +40,4 @@ find = function(searchX, searchY, size, keyword) {
     }
   }
 };
-searchButton.addEventListener('click', onclick);
+searchButton.addEventListener('click', pushed);
