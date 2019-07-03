@@ -18,10 +18,10 @@ var find = function() {
       for (var x = 0; x < yabloc.length; x++) {
         if (searchX < yabloc[x][0] && searchX + size > yabloc[x][0] && searchY < yabloc[x][1] && searchY + size > yabloc[x][1]) {
           if (counteer == false) {
-            console.log('object found')
             console.log(objecter.display_name)
             results.innerHTML += objecter.display_name
           }
+          console.log('object found')
           console.log(yabloc[x]);
           results.innerHTML += yabloc[x]
           counteer = true
