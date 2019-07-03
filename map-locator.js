@@ -2,7 +2,7 @@
 // console.log(data.toString('utf8'))
 var searchButton = document.getElementById('searchButton');
 var find = function() {
-  console.log('starting...)
+  console.log('starting...')
   var results = document.getElementById('objects')
   var collected = Object.entries(locations)
   var keyword = document.getElementById('keyword').value
