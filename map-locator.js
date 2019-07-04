@@ -1,10 +1,11 @@
  console.log(Object.keys(locations).length)
 // console.log(data.toString('utf8'))
 var searchButton = document.getElementById('searchButton');
+var collected = Object.entries(locations)
+
 var onclick = function() {
   console.log('starting...')
   var results = document.getElementById('objects')
-  var collected = Object.entries(locations)
   var keyword = document.getElementById('keyword').value
   var searchX = document.getElementById('x').value
   var searchY = document.getElementById('y').value
