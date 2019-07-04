@@ -19,7 +19,6 @@ find = function(searchX, searchY, size, keyword) {
   for (var y = 0; y < collected.length; y++) {
     var objecter= collected[y][1]
     if (objecter.display_name.search(keyword) > -1) {
-      console.log('match found')
       var yabloc = objecter.locations
       var counteer = false
       for (var x = 0; x < yabloc.length; x++) {
