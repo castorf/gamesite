@@ -26,7 +26,7 @@ find = function(searchX, searchY, size, keyword) {
             results.appendChild(document.createTextNode(objecter.display_name))
           }
           console.log(yabloc[x]);
-          results.appendChild(document.createTextNode(' ' + yabloc[x]);
+          results.appendChild(document.createTextNode(' ' + yabloc[x]));
           counteer = true
         }
       }
