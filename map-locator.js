@@ -12,6 +12,9 @@ var collected = Object.entries(locations)
   var size = document.getElementById('size').value
   results.innerHTML = ''
   find(searchX, searchY, size, keyword);
+  if (results.innerHTML === '') {
+    console.log("no objects found");
+  }
 }
 find = function(searchX, searchY, size, keyword) {
   for (var y = 0; y < collected.length; y++) {
