@@ -3,7 +3,7 @@
 var searchButton = document.getElementById('searchButton');
 var collected = Object.entries(locations)
 
-var onclick = function() {
+var searchButton.onclick = function() {
   console.log('starting...')
   var results = document.getElementById('objects')
   var keyword = document.getElementById('keyword').value
@@ -33,4 +33,3 @@ find = function(searchX, searchY, size, keyword) {
     }
   }
 };
-searchButton.addEventListener('click', onclick);
