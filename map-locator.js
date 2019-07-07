@@ -5,10 +5,10 @@ var collected = Object.entries(locations)
 
  button.onclick = function() {
   console.log('starting...')
-  var results = document.getElementById('objects')
+  var results = Number(document.getElementById('objects'))
   var keyword = document.getElementById('keyword').value
-  var searchX = document.getElementById('x').value
-  var searchY = document.getElementById('y').value
+  var searchX = Number(document.getElementById('x').value)
+  var searchY = Number(document.getElementById('y').value)
   var size = document.getElementById('size').value
   results.innerHTML = ''
   find(searchX, searchY, size, keyword);
