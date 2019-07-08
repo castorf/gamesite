@@ -12,7 +12,7 @@ var collected = Object.entries(locations)
   var radius = document.getElementById('radius').value
   var radSqrd = radius*radius
   results.innerHTML = ''
-  find(searchX, searchY, radius, keyword);
+  find(searchX, searchY, radSqrd, keyword);
   if (results.innerHTML === '') {
     console.log("no objects found");
   }
