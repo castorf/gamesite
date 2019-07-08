@@ -17,7 +17,7 @@ var collected = Object.entries(locations)
     console.log("no objects found");
   }
 }
-find = function(searchX, searchY, size, keyword) {
+find = function(searchX, searchY, radSqrd, keyword) {
   for (var y = 0; y < collected.length; y++) {
     var objecter= collected[y][1]
     if (objecter.display_name.search(keyword) > -1) {
