@@ -9,7 +9,8 @@ var collected = Object.entries(locations)
   var keyword = document.getElementById('keyword').value
   var searchX = Number(document.getElementById('x').value)
   var searchY = Number(document.getElementById('y').value)
-  var size = document.getElementById('size').value
+  var radius = document.getElementById('radius').value
+  var radSqrd = radius*radius
   results.innerHTML = ''
   find(searchX, searchY, size, keyword);
   if (results.innerHTML === '') {
@@ -23,7 +24,10 @@ find = function(searchX, searchY, size, keyword) {
       var yabloc = objecter.locations
       var counteer = false
       for (var x = 0; x < yabloc.length; x++) {
-        if (searchX < yabloc[x][0] && searchX + size > yabloc[x][0] && searchY < yabloc[x][1] && searchY + size > yabloc[x][1]) {
+        var xDist = searchX - yabloc[x][0]
+        var yDist = searchY - yabloc[x][1]
+        var distSqrd = (xDist * xDist) + (yDist * yDist)
+        if (distSqrd < radSqrd) {
           if (counteer == false) {
             console.log(objecter.display_name)
             results.appendChild(document.createTextNode(objecter.display_name))
