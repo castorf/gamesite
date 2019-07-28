@@ -14,4 +14,3 @@ var fname = 'map_locations.js'
 // Read the file into a Buffer 'data'
 data = fs.readFileSync('circletest.js')
 eval(data.toString('ascii'))
-

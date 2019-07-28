@@ -23,6 +23,23 @@
   <div id = "results"></div>
   <script src = "map_locations.js"></script>
   <script src = "map-locator.js"></script>
+  <script>
+  var button = document.getElementById('searchButton');
+
+   button.onclick = function() {
+    console.log('starting...')
+    var results = Number(document.getElementById('objects'))
+    var keyword = document.getElementById('keyword').value
+    var searchX = Number(document.getElementById('x').value)
+    var searchY = Number(document.getElementById('y').value)
+    var radius = document.getElementById('radius').value
+    results.innerHTML = ''
+    find(searchX, searchY, radSqrd, keyword);
+    if (results.innerHTML === '') {
+      console.log("no objects found");
+    }
+  }
+  </script>
 
  </body>
 </html>
