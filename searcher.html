@@ -44,7 +44,7 @@
     }
   }
   </script>
-  <div id="botw_map" height = 180px></div>
+  <div id="botw_map" style = "height: 800px"></div>
   <script>
   var map = L.map('botw_map', {
     preferCanvas: true,
@@ -54,11 +54,26 @@
     zoom: -4,
     crs: L.CRS.Simple
   });
-  var mymap = L.map('botw_map').setView([51.505, -0.09], 13);
+//  var mymap = L.map('botw_map').setView([51.505, -0.09], 13);
   var southWest = map.unproject([-6000, 5000], 0);
   var northEast = map.unproject([6000, -5000], 0);
   var bounds = new L.LatLngBounds(southWest, northEast);
   L.imageOverlay('BotW-Map-Grid.png', bounds).addTo(map);
+var myIcon = L.icon({iconUrl: 'images/chosen-sprite.png'})
+  var ormarker = L.marker(
+		map.unproject([0, 0], -4),
+			    {
+//				icon: L.divIcon({className:'div-icon0'}),
+				icon: myIcon,
+				title:'Origin'
+			    }).addTo(map);
+  var swmarker = L.marker(southWest,
+			    {
+				icon: L.divIcon({className: 'div-icon1'}),
+				title: 'southWest'
+			    }).addTo(map);
+    // map.addLayer(ormarker);
+    // map.addLayer(swmarker);
   </script>
  </body>
 </html>
